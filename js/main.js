@@ -13,7 +13,7 @@ jQuery(function($, undefined) {
            term.echo('');
         }
     }, {
-        greetings: 'jTerminal',
+        greetings: 'Terminal.js',
         name: 'tty',
         height: 720,
         prompt: '# '
