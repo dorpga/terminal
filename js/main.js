@@ -1,16 +1,10 @@
 jQuery(function($, undefined) {
     $('#tty').terminal(function(command, term) {
-        if (command !== '') {
-            try {
-                var result = window.eval(command);
-                if (result !== undefined) {
-                    term.echo(new String(result));
-                }
-            } catch(e) {
-                term.error(new String(e));
-            }
-        } else {
-           term.echo('');
+        var cmd = command.split(' ');
+        switch (cmd[0]) {
+            case "echo":
+                term.echo(cmd[1]);
+                break;
         }
     }, {
         greetings: 'Terminal.js',
