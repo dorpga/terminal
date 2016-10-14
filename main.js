@@ -1,5 +1,5 @@
 jQuery(function($, undefined) {
-    $('#term_demo').terminal(function(command, term) {
+    $('#tty').terminal(function(command, term) {
         if (command !== '') {
             try {
                 var result = window.eval(command);
